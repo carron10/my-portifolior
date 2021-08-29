@@ -2,7 +2,7 @@
 - 👀 I’m interested in programming 
 - 🌱 I’m currently learning java and python 
 - 💞️ I’m looking to collaborate on java android, desktop and web development 
-- 📫 How to reach me website www.chatsfly.co.zw
+- 📫 You can reach me on www.cartso.co.zw
 
 <!---
 carron10/carron10 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
