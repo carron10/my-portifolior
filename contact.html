@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/mystyle.css">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md sticky-top bg-white p-1">
+            <!--            <a class="navbar-header" style=" padding-top: 5px" href="/index.jsp">
+                            <img src="img/nust-small-logo.png" alt="logo">
+                        </a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse">
+                <span class="navbar-toggler-icon a"></span>
+                <span class="navbar-toggler-icon b"></span>
+                <span class="navbar-toggler-icon c"></span>
+
+            </button>
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class=" nav navbar-nav ml-auto ml-auto pr-2">
+                    <li class=" nav-item">
+                        <a class="nav-link" href="/" >
+                            Home 
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="projects.html" >
+                            PROJECTS
+                        </a>
+                      
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            MORE
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class=" dropdown-item nav-link" href="about.html" >About</a>
+                            <a class="dropdown-item nav-link"  href="/terms-and-conditions.html" >Terms and Conditions</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class=" jumbotron p-0 m-0 overflow-hidden">
+            
+            <div class="container bg-white p-2">
+                <div class="text-center"><h4>Contact us</h4><hr class="line"></div>
+                <div class=" d-flex justify-content-between row">
+                    <div class=" col-sm-5">
+                        <form class="p-2 mb-2"  method = "post" name="comment">
+                            <label>Your Name*</label>
+                            <input type="text" class=" form-control fa-zi"  id="name" placeholder="Enter your name" required>
+                            <br>
+                            <label>Your Email*</label>
+                            <input type="email" class=" form-control"  id="email" placeholder="Enter your email" required>
+                            <br>
+                            <label>Your Phone*</label>
+                            <input type="tel" class=" form-control"  id="email" placeholder="Enter your phone" required>
+                            <br>
+                             
+                            <label>Your Message*</label>
+                            <textarea class="form-control" id="msg" rows="5" placeholder="Type your message here" required></textarea>
+                            <br>
+                            <button class="btn bg-info" name="send" type="submit">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class=" text-center raised p-2">
+                            <i class=" fa fa-map-marker fa-3x text-danger"></i>
+                            <h4 class="text-success">LOCATION</h4>
+                            <p>Bulawayo, Zimbabwe</p>
+                        </div>
+                        <div class=" text-center raised p-2 mt-2">
+                            <i class=" fa fa-clock-o fa-3x text-danger"></i>
+                            <h4 class=" text-success">SCHEDULE</h4>
+                            <p></p>
+                            
+                        </div>
+                        <div class=" text-center raised p-2 mt-2">
+                            <i class=" fa fa-phone fa-3x text-danger"></i>
+                            <h4 class="text-success">CONTACT</h4>
+                            <p>Phone:0771013028, 0717039476</p>
+                            <p>Email:carronmuleya10@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="text-center raised p-2 mt-3" style=" padding: 20px; color: #ff0000">
+                    <h5>FOLLOW US</h5>
+                    <div class="text-center  p-2">
+                        <a href="#!" class=" fa fa-whatsapp   p-2 border rounded-circle border-primary" style=" color: #00ff00"></a>
+                        <a href="#!" class=" fa fa-facebook    p-2 border rounded-circle border-primary" style=" color: #00ff00"></a>
+                        <a href="#!" class=" fa fa-twitter  p-2 border rounded-circle border-primary" style=" color: #00ff00"></a>
+                        <a href="#!" class=" fa fa-instagram    p-2 border  rounded-circle border-success" style=" color: #ff0000;  "></a>
+                        <a href="#!" class=" fa fa-linkedin  p-2 border rounded-circle border-primary" style=" color: #00ff00"></a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div class="modal" data-backdrop="static" id="alert">
+            <div class=" modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a class="close text-danger" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Listen to submit event on the <form> itself!
+                $(document.comment).submit(function (e) {
+                    e.preventDefault();
+                    var btn = $(document.comment.send);
+                    var name = $("#name").val();
+                    var msg = $("#msg").val();
+                    var email = $("#email").val();
+                    var phone=$("#phone").val();
+                    btn.attr("disabled", true);
+                    btn.html(" <span class=\"spinner-grow spinner-grow-sm\" id=\"loader\" role=\"status\" aria-hidden=\"true\"></span>Sending....");
+                    var send = $.ajax({
+                        url:"contact",
+                        data: {name: name,phone:phone, email: email, msg: msg},
+                        method: "post"
+                    }).done(function (evt) {
+                        btn.attr("disabled", false);
+                        $('#alert .modal-body').html(evt);
+                        $('#alert').modal("show");
+                        btn.text("Send");
+                    }).fail(function () {
+                        $('#myModal .modal-body').html("There is an error happen");
+                        $('#myModal').modal("show");
+                        btn.attr("disabled", false);
+                        btn.html("Send");
+                    });
+                }
+                );
+            });
+        </script>
+        <!--  Php code to include the footers -->
+        <footer class=" shadow  fixed-bottom">
+            <div class=" d-flex align-items-center justify-content-between small bg-secondary" >
+                <div>
+                    <i>carronmuleya10@gmail.com</i>
+                </div>
+                <div class="text-center">
+                    <a class="fa fa-chevron-up" data-toggle="collapse" href="#foot" role="button" aria-expanded="false" aria-controls="foot">
+                    </a>
+                </div>
+                <div class="pr-2">
+                    <i>Web Development</i>
+                </div>
+            </div>
+            <div class=" collapse" id="foot">
+                <div class="footer-social-link">
+                    <div class="text-center  p-2 bg-secondary">
+                        <a href="#!" class=" fa fa-twitter p-1 border "></a>
+                        <a href="#!" class=" fa fa-facebook  p-1 border "></a>
+                        <a href="#!" class=" fa fa-instagram  p-1 border "></a>
+                        <a href="linkedin.com/in/carron-muleya-34a530206" class=" fa fa-whatsapp  p-1 border "></a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between small bg-success p-1">
+                        <div style="color: black">Copyright &copy; Cartso 2021</div>
+                        <div>
+                            <a href="#" style="color: black">Privacy Policy</a>
+                            &middot;
+                            <a href="#" style="color: black">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

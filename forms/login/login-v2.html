@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login Page Template V1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            #container{
+                position: relative; 
+                top: 100px;
+                margin: auto;
+                width: 400px;
+                background-color: #ffffff;
+            }
+            form{
+                padding: 10px;
+                width: 100%;
+                display: block;
+            }
+            #footer,#head{
+                padding: 10px;
+                text-align: center;
+                background-color: #cccccc;
+            }
+            input[type='text'],input[type='password']{
+                outline: none;
+                width: 90%;
+                margin: 4px 0;
+                padding: 5px;
+                border: 1px solid #666666;
+            }
+            input[type='checkbox']{
+                outline: none;
+                margin-left: 0;
+                
+               
+            }
+            button{
+                margin: 4px  0;
+                outline: none;
+                background-color: #6666ff;
+                border:  none;
+                color: white;
+                width: 100px;
+                cursor: pointer;
+                padding: 10px;
+            }
+            @media (max-width:500px){
+                #container{
+                     width:100%;
+                     margin: auto;
+                     top: 50px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="head">
+                <h2>Login</h2>
+            </div>
+
+            <form>
+                <br>
+                <label for="email" >Name</label>
+                <input type="text" name="email" placeholder="Enter Email" required>
+                <br>
+                <label for="pswd">Password</label>
+                <input type="password" name="pswd" placeholder="Enter Password" required>
+                <br>
+                <input name="rem" type="checkbox"><label for="rem">Remember me</label>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <div id="footer">
+                <a href="etc/reset-password-v1.html">Forgot password</a>
+                <p>No account <a href="register/register-v1.html">register</a></p>
+            </div>
+        </div>
+    </body>
+</html>
